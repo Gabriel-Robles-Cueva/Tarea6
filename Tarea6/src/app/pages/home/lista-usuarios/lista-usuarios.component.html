@@ -1,0 +1,9 @@
+<section class="usuarios">
+  <div class="row g-2 justify-content-center">
+    @for(usuario of arrUsuariosPromises; track usuario.id){
+    <article class="col-12 col-md-6 col-lg-3">
+      <app-usuario-card [miUsuario]="usuario"></app-usuario-card>
+    </article>
+    }
+  </div>
+</section>

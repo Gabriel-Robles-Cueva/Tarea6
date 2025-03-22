@@ -1,0 +1,11 @@
+.imageUser {
+  min-height: 350px;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}

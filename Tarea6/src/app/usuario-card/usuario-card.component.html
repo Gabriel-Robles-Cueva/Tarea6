@@ -1,0 +1,27 @@
+<div class="card border border-1 border-black p-1">
+  <figure>
+    <img class="imagesUser" [src]="miUsuario.image" [alt]="miUsuario.first_name">
+  </figure>
+  <div class="text-center">
+    <p class="">{{miUsuario.first_name}}&nbsp;{{miUsuario.last_name}}</p>
+  </div>
+  <div id="acciones">
+    <div class="text-center">
+      <a [routerLink]="['/user', miUsuario._id]">
+        <img width="40px" height="40px" src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-magnifying-glass-line-icon-png-image_9015864.png"/><br>
+        Ver Detalle
+      </a>
+    </div>
+    <div class="text-center">
+      <a [routerLink]="['/updateUser', miUsuario.id]">
+        <img width="40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/46/46640.png"/><br>
+        Actualizar
+      </a>
+    </div>
+    <div class="text-center">
+      <a href="#">
+        <img width="40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/7491/7491835.png"/><br>
+        Borrar
+      </a>
+    </div>
+</div>

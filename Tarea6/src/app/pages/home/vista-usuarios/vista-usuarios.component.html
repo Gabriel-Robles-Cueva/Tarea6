@@ -1,0 +1,14 @@
+<section class="container py-4">
+  <div class="row">
+    <figure class="col-12 col-md-4" style="border-right: 3px solid black;">
+      <img class="img-fluid imageUser" [src]="elUsuario.image" [alt]="elUsuario.first_name">
+    </figure>
+    <div class="col-12 col-md-8">
+      <h1>{{elUsuario.first_name}}</h1>
+      <hr class="border-white">
+      <p class="text-warning">{{elUsuario.last_name}}</p>
+      <p class="text-warning">{{elUsuario.username}}</p>
+      <p class="text-warning">{{elUsuario.email}}</p>
+    </div>
+  </div>
+</section>

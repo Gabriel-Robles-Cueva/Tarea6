@@ -1,0 +1,42 @@
+figure {
+  background-size: cover;
+  background-position: center center;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  max-height: 350px;
+  min-height: 350px;
+}
+
+.imagesUser {
+  min-height: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  object-position: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#acciones{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+
+  div{
+    width: 70px;
+    font-size: 10px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
