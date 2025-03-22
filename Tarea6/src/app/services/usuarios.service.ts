@@ -17,8 +17,20 @@ export class UsuariosService {
   }
 
   getById(id: string): Promise<IUser> {
-    console.log(this.baseUrl+"/"+id);
-
     return lastValueFrom(this.httpClient.get<IUser>(`${this.baseUrl}/${id}`))
+  }
+
+  delete(id: string): Promise<IUser> {
+    return lastValueFrom(this.httpClient.delete<IUser>(`${this.baseUrl}/${id}`));
+  }
+
+  update(user: IUser): Promise<IUser> {
+    let { _id, ...userBody } = user;
+    return lastValueFrom(this.httpClient.put<IUser>(`${this.baseUrl}/${_id}`, userBody))
+  }
+
+  insert(user: IUser): Promise<IUser> {
+    let { _id, ...userBody } = user;
+    return lastValueFrom(this.httpClient.post<IUser>(this.baseUrl, userBody))
   }
 }

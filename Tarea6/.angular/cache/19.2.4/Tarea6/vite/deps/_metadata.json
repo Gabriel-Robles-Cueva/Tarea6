@@ -1,46 +1,55 @@
 {
-  "hash": "f313fe0e",
-  "configHash": "991b798e",
+  "hash": "1bbe50f3",
+  "configHash": "c6e64cc3",
   "lockfileHash": "f85035b8",
-  "browserHash": "67ea9e73",
+  "browserHash": "0377a88d",
   "optimized": {
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "008624d2",
+      "fileHash": "9757b900",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "fc7c185d",
+      "fileHash": "9da0cde1",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "c3b2b5e7",
+      "fileHash": "dea93a73",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "1c46837f",
+      "fileHash": "28ac5339",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "313780f2",
+      "fileHash": "98b979a8",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "e9fa6899",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-ONSY6XWH": {
-      "file": "chunk-ONSY6XWH.js"
+    "chunk-CU5T4KE7": {
+      "file": "chunk-CU5T4KE7.js"
     },
-    "chunk-44D6PKAT": {
-      "file": "chunk-44D6PKAT.js"
+    "chunk-Q2SBTE6C": {
+      "file": "chunk-Q2SBTE6C.js"
+    },
+    "chunk-UOGKNKG2": {
+      "file": "chunk-UOGKNKG2.js"
     },
     "chunk-56PPHEMJ": {
       "file": "chunk-56PPHEMJ.js"

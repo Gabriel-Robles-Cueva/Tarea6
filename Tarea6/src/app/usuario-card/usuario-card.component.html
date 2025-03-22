@@ -13,13 +13,13 @@
       </a>
     </div>
     <div class="text-center">
-      <a [routerLink]="['/updateUser', miUsuario.id]">
+      <a [routerLink]="['/updateUser', miUsuario._id]">
         <img width="40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/46/46640.png"/><br>
         Actualizar
       </a>
     </div>
     <div class="text-center">
-      <a href="#">
+      <a (click)="deleteUser(miUsuario._id)">
         <img width="40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/7491/7491835.png"/><br>
         Borrar
       </a>
