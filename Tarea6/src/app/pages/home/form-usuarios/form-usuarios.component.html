@@ -1,28 +1,102 @@
-<div class="card shadow p-4">
+@if (title !== "Actualizar") {
+  <div class="card shadow p-4">
     <h2 class="mb-4 text-left">{{title}} Usuario</h2>
-    <form>
-        <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre Usuario</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Introduzca nombre de usuario">
-        </div>
+    <form [formGroup]="userForm" (ngSubmit)="getDataForm()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Usuario</label>
+        <input type="text" class="form-control" id="nombre" formControlName="first_name" placeholder="Introduce tu nombre">
+        @if(isInvalid('first_name')){
+          <div class="text-danger">
+            El nombre es obligatorio y debe tener al menos 2 caracteres.
+          </div>
+        }
+      </div>
 
-        <div class="mb-3">
-            <label for="apellido" class="form-label">Apellido Usuario</label>
-            <input type="text" class="form-control" id="apellido" placeholder="Introduzca apellido de usuario">
-        </div>
+      <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido Usuario</label>
+        <input type="text" class="form-control" id="apellido" formControlName="last_name" placeholder="Introduce tu apellido">
+        @if(isInvalid('last_name')){
+          <div class="text-danger">
+            El apellido es obligatorio y debe tener al menos 2 caracteres.
+          </div>
+        }
+      </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email Usuario</label>
-            <input type="email" class="form-control" id="email" placeholder="Introduzca email de usuario">
-        </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Usuario</label>
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="Introduce tu email">
+        @if(isInvalid('email')){
+          <div class="text-danger">
+            Introduce un email válido.
+          </div>
+        }
+      </div>
 
-        <div class="mb-3">
-            <label for="imagen" class="form-label">Imagen Usuario</label>
-            <input type="text" class="form-control" id="imagen" placeholder="Introduzca URL de la foto">
-        </div>
+      <div class="mb-3">
+        <label for="imagen" class="form-label">Imagen Usuario</label>
+        <input type="text" class="form-control" id="imagen" formControlName="image" placeholder="Introduce la URL">
+        @if(isInvalid('image')){
+          <div class="text-danger">
+            La URL de la imagen es obligatoria.
+          </div>
+        }
+      </div>
 
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </div>
+      <div class="text-left">
+        <button type="submit" class="btn btn-outline-dark" [disabled]="!userForm.valid">Guardar</button>
+      </div>
     </form>
-</div>
+  </div>
+}
+
+@if (title === "Actualizar") {
+  <div class="card shadow p-4">
+    <h2 class="mb-4 text-left">{{title}} Usuario</h2>
+    <form [formGroup]="userForm" (ngSubmit)="getDataForm()">
+
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Usuario</label>
+        <input type="text" class="form-control" id="nombre" formControlName="first_name">
+        @if(isInvalid('first_name')){
+          <div class="text-danger">
+            El nombre es obligatorio y debe tener al menos 2 caracteres.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido Usuario</label>
+        <input type="text" class="form-control" id="apellido" formControlName="last_name">
+        @if(isInvalid('last_name')){
+          <div class="text-danger">
+            El apellido es obligatorio y debe tener al menos 2 caracteres.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Usuario</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        @if(isInvalid('email')){
+          <div class="text-danger">
+            Introduce un email válido.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="imagen" class="form-label">Imagen Usuario</label>
+        <input type="text" class="form-control" id="imagen" formControlName="image">
+        @if(isInvalid('image')){
+          <div class="text-danger">
+            La URL de la imagen es obligatoria.
+          </div>
+        }
+      </div>
+
+      <div class="text-left">
+        <button type="submit" class="btn btn-outline-dark" [disabled]="!userForm.valid">Guardar</button>
+      </div>
+    </form>
+  </div>
+}

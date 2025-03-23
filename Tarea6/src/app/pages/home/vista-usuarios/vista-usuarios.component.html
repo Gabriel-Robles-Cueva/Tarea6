@@ -12,7 +12,7 @@
       <table>
         <tr>
           <td style="border-right: 1px solid gray;"><button class="btn" (click)="deleteUser(elUsuario._id)">Eliminar</button></td>
-          <td style="border-right: 1px solid gray;"><button class="btn" [routerLink]="['/updateUser', elUsuario.id]">Actualizar</button></td>
+          <td style="border-right: 1px solid gray;"><button class="btn" [routerLink]="['/updateUser', elUsuario._id]">Actualizar</button></td>
           <td><button class="btn" [routerLink]="['/home']">Volver a listado</button></td>
         </tr>
       </table>
